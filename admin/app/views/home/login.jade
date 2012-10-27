@@ -1,0 +1,13 @@
+- styles.push( 'login' )
+#form-wrap
+  form#login(action="/home/login", method="POST", accept-charset="utf-8")
+    fieldset
+      legend Login
+      .row(class="clearfix")
+        label(for="user") Name : 
+        input(class="text", type="text", name="user")
+      .row(class="clearfix")
+        label(for="passwd") Password : 
+        input(class="text", type="password", name="passwd")
+      .row(class="clearfix")
+        input(class="btn", type="submit", value="Login")

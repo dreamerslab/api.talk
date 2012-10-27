@@ -1,0 +1,14 @@
+- if( count > limit ) 
+  - var p = pager( from, count, limit )
+  #pagenation
+    a(class=p.pre, href="/#{action}/index?#{find_raw}&sort=#{sort}&asc=#{asc}&from=#{p.pre_from}") <
+    a(class=p.first, href="/#{action}/index?#{find_raw}&sort=#{sort}&asc=#{asc}&from=0") 1
+    span(class=p.start_spacer) ...
+    - for( var i = p.start, j = p.end; i < j; i++ ){
+      - var selected = p.page == i ? 'selected' : ''
+      a(class=selected, href="/#{action}/index?#{find_raw}&sort=#{sort}&asc=#{asc}&from=#{p.each_from}") #{i}
+      - p.each_from += limit
+    - }
+    span(class=p.end_spacer) ...
+    a(class=p.last, href="/#{action}/index?#{find_raw}&sort=#{sort}&asc=#{asc}&from=#{p.end_from}") #{p.total}
+    a(class=p.next, href="/#{action}/index?#{find_raw}&sort=#{sort}&asc=#{asc}&from=#{p.next_from}") >

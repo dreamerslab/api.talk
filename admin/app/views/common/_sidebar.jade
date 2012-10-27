@@ -1,0 +1,12 @@
+#sidebar
+  h3 MODULE
+  ul
+    li
+      a(class=data.module_user, href='/module_user/index', title='Go to /module_user/index' ) Users
+    li
+      a(class=data.module_channel, href='/module_channel/index', title='Go to /module_channel/index') Channels
+  h3 RAW TABLE
+  ul
+    - each it, name in data.raw
+      li
+        a(class=it.klass, href=it.href, title=it.title) #{name}

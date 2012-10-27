@@ -1,0 +1,5 @@
+#toolbar
+  ul
+    - each it, name in data
+      li 
+        a(class=it.klass, href=it.href, title=it.title, type=it.type) #{name}

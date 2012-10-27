@@ -1,0 +1,42 @@
+/* line 3, ../../app/sass/header.sass */
+header {
+  height: 30px;
+  background: url("/img/bg/header.gif") repeat;
+  position: relative;
+  text-align: center;
+}
+
+/* line 9, ../../app/sass/header.sass */
+#header-l {
+  position: absolute;
+  padding: 7px 0 0 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 160px;
+  border-right: 1px solid black;
+}
+
+/* line 20, ../../app/sass/header.sass */
+#title {
+  position: absolute;
+  padding: 7px 0 0 0;
+  top: 0;
+  bottom: 1px;
+  left: 161px;
+  right: 100px;
+  border-left: 1px solid #5e5e5e;
+}
+
+/* line 29, ../../app/sass/header.sass */
+#header-r {
+  padding: 7px 10px 0 0;
+  float: right;
+  display: inline;
+}
+/* line 33, ../../app/sass/header.sass */
+#header-r li {
+  float: left;
+  display: inline;
+  padding: 0 3px;
+}

@@ -1,0 +1,45 @@
+- styles.push( 'app' )
+- scripts.push( 'app' )
+!= partial( 'common/_sidebar', { data : sidebar })
+#content
+  != partial( 'common/_toolbar', { data : toolbar })
+  #records
+    table
+      thead
+        tr
+          - var _asc = -parseInt( asc, 10 )
+          th(nowrap="nowrap") Number
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=_id&asc=#{_asc}&from=#{from}") ID
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=sender_id&asc=#{_asc}&from=#{from}") Sender ID
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=sender_name&asc=#{_asc}&from=#{from}") Sender Name
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=receiver_id&asc=#{_asc}&from=#{from}") Receiver ID
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=receiver_type&asc=#{_asc}&from=#{from}") Receiver type
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=content&asc=#{_asc}&from=#{from}") Content
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=created_at&asc=#{_asc}&from=#{from}") Created at
+      tbody
+        - var i = from;
+        - each record in records
+          - i++;
+          tr(class="row", _id="#{record._id}", _index="#{i}")
+            td(nowrap="nowrap") #{i}
+            td(nowrap="nowrap") #{record._id}
+            td(nowrap="nowrap")
+              span(_type="sender_id") #{record.sender_id}
+            td(nowrap="nowrap")
+              span(_type="sender_name") #{record.sender_name}
+            td(nowrap="nowrap")
+              span(_type="receiver_id") #{record.receiver_id}
+            td(nowrap="nowrap")
+              span(_type="receiver_type") #{record.receiver_type}
+            td(nowrap="nowrap")
+              span(_type="content") #{record.content}
+            td(nowrap="nowrap")
+              span(_type="created_at") #{record.created_at}
+  != partial( 'common/_pagenation' )

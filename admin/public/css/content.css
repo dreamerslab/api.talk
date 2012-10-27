@@ -1,0 +1,83 @@
+/* line 3, ../../app/sass/content.sass */
+#content {
+  position: absolute;
+  overflow: hidden;
+  top: 30px;
+  left: 161px;
+  right: 0;
+  bottom: 24px;
+  -webkit-box-shadow: inset 0 0 5px 1px #222222;
+  -moz-box-shadow: inset 0 0 5px 1px #222222;
+  box-shadow: inset 0 0 5px 1px #222222;
+}
+
+/* line 12, ../../app/sass/content.sass */
+#records {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 0 30px;
+  overflow: auto;
+}
+/* line 22, ../../app/sass/content.sass */
+#records table th, #records table td {
+  text-align: center;
+}
+/* line 25, ../../app/sass/content.sass */
+#records table th {
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px black;
+  padding: 10px;
+}
+/* line 30, ../../app/sass/content.sass */
+#records table th a {
+  color: #eeeeee;
+}
+/* line 33, ../../app/sass/content.sass */
+#records table td {
+  color: #dddddd;
+  text-shadow: 0 -1px 0 #111111;
+  padding: 5px 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+/* line 39, ../../app/sass/content.sass */
+#records table td img {
+  width: 50px;
+  height: 50px;
+}
+/* line 43, ../../app/sass/content.sass */
+#records table tr {
+  border-bottom: 1px solid #383838;
+}
+/* line 45, ../../app/sass/content.sass */
+#records table tr.selected {
+  color: white;
+  background: url("/img/bg/row-selected.gif") repeat;
+  border-bottom: 1px solid #333333;
+}
+
+/* line 51, ../../app/sass/content.sass */
+#pagenation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 0;
+  text-align: center;
+}
+/* line 59, ../../app/sass/content.sass */
+#pagenation a {
+  padding: 5px;
+  font-weight: bolder;
+  color: #eeeeee;
+  text-shadow: 1px 1px 1px black;
+}
+/* line 64, ../../app/sass/content.sass */
+#pagenation a.selected {
+  text-decoration: underline;
+}

@@ -1,0 +1,106 @@
+/* line 3, ../../app/sass/msg.sass */
+.msg-header {
+  padding: 10px 10px 30px;
+  text-align: center;
+}
+/* line 7, ../../app/sass/msg.sass */
+.msg-header h3 {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+/* line 11, ../../app/sass/msg.sass */
+.msg-content {
+  padding: 0 20px;
+}
+
+/* line 14, ../../app/sass/msg.sass */
+.msg-row {
+  padding: 0 0 10px;
+}
+/* line 17, ../../app/sass/msg.sass */
+.msg-row label.error {
+  display: block;
+  margin: 0 0 0 135px;
+  color: red;
+  clear: both;
+}
+
+/* line 23, ../../app/sass/msg.sass */
+.msg-row-title {
+  width: 130px;
+  padding: 7px 5px 0 0;
+  text-align: right;
+  height: 25px;
+  float: left;
+  display: inline;
+}
+
+/* line 30, ../../app/sass/msg.sass */
+.msg-row-content {
+  border: 1px solid #cccccc;
+  padding: 5px;
+  width: 180px;
+  margin: 0 30px 0 0;
+  float: right;
+  display: inline;
+  -webkit-background-clip: padding-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 38, ../../app/sass/msg.sass */
+.msg-footer {
+  padding: 20px 0 5px;
+  text-align: center;
+}
+/* line 42, ../../app/sass/msg.sass */
+.msg-footer input {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+/* line 48, ../../app/sass/msg.sass */
+.msg-footer input:hover {
+  text-decoration: underline;
+}
+
+/* line 51, ../../app/sass/msg.sass */
+#overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* line 59, ../../app/sass/msg.sass */
+#msg-wrap {
+  position: absolute;
+}
+/* line 62, ../../app/sass/msg.sass */
+#msg-wrap input {
+  line-height: 13px;
+  font-size: 13px;
+  border: none;
+  padding: 3px;
+  -webkit-background-clip: padding-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 70, ../../app/sass/msg.sass */
+#msg-drop p {
+  line-height: 2em;
+}

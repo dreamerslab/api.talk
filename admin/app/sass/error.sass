@@ -1,0 +1,20 @@
+@import "lib.sass"
+
+#main
+  position: absolute
+  top: 30px
+  bottom: 24px
+  left: 0
+  right: 0
+  @include box-sink( 0, 0, 5px, 1px, #222 )
+  
+#msg
+  position: absolute
+  top: 47%
+  text-align: center
+  width: 100%
+  font-size: 36px
+  color: #ccc
+  text-shadow: white 0 -1px 0, #333333 0 1px 0, #050505 0 3px 5px
+  filter: Shadow(Color=#050505, Direction=180, Strength=3)
+  

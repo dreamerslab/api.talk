@@ -1,0 +1,28 @@
+@import "lib.sass"
+
+#jquery-msg-overlay
+  text-shadow: none
+  overflow: hidden
+  @include select
+
+#jquery-msg-bg
+  background: black
+  @include opacity( 60 )
+
+.jquery-msg-content
+  -webkit-background-clip: padding-box
+  padding: 15px
+
+.black-on-white .jquery-msg-content
+  background: white
+  color: #333
+  @include opacity( 90 )
+  @include box-shadow( 5px, 5px, 30px, 0, black )
+  @include box-round( 8px )
+
+.white-on-black .jquery-msg-content
+  background: black
+  color: white
+  @include opacity( 50 )
+  @include box-round( 8px )
+

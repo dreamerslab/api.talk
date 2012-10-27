@@ -1,0 +1,1 @@
+global.SECRET = require( 'secret' );

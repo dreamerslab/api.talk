@@ -1,0 +1,33 @@
+- styles.push( 'app' )
+- scripts.push( 'app' )
+!= partial( 'common/_sidebar', { data : sidebar })
+#content
+  != partial( 'common/_toolbar', { data : toolbar })
+  #records
+    table
+      thead
+        tr
+          - var _asc = -parseInt( asc, 10 )
+          th(nowrap="nowrap") Number
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=_id&asc=#{_asc}&from=#{from}") ID
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=name&asc=#{_asc}&from=#{from}") Name
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=created_at&asc=#{_asc}&from=#{from}") Created at
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=updated_at&asc=#{_asc}&from=#{from}") Updated at
+      tbody
+        - var i = from;
+        - each record in records
+          - i++;
+          tr(class="row", _id="#{record._id}", _index="#{i}")
+            td(nowrap="nowrap") #{i}
+            td(nowrap="nowrap") #{record._id}
+            td(nowrap="nowrap")
+              span(_type="name") #{record.name}
+            td(nowrap="nowrap")
+              span(_type="created_at") #{record.created_at}
+            td(nowrap="nowrap")
+              span(_type="updated_at") #{record.updated_at}
+  != partial( 'common/_pagenation' )

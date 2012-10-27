@@ -1,0 +1,45 @@
+- styles.push( 'app' )
+- scripts.push( 'app' )
+!= partial( 'common/_sidebar', { data : sidebar })
+#content
+  != partial( 'common/_toolbar', { data : toolbar })
+  #records
+    table
+      thead
+        tr
+          - var _asc = -parseInt( asc, 10 )
+          th(nowrap="nowrap") Number
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=_id&asc=#{_asc}&from=#{from}") ID
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=user_id&asc=#{_asc}&from=#{from}") User ID
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=user_name&asc=#{_asc}&from=#{from}") User Name
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=action&asc=#{_asc}&from=#{from}") Action
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=channel_id&asc=#{_asc}&from=#{from}") Channel ID
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=connection_id&asc=#{_asc}&from=#{from}") Connection ID
+          th(nowrap="nowrap")
+            a(href="/#{action}/index?#{find_raw}&sort=created_at&asc=#{_asc}&from=#{from}") Created at
+      tbody
+        - var i = from;
+        - each record in records
+          - i++;
+          tr(class="row", _id="#{record._id}", _index="#{i}")
+            td(nowrap="nowrap") #{i}
+            td(nowrap="nowrap") #{record._id}
+            td(nowrap="nowrap")
+              span(_type="user_id") #{record.user_id}
+            td(nowrap="nowrap")
+              span(_type="user_name") #{record.user_name}
+            td(nowrap="nowrap")
+              span(_type="action") #{record.action}
+            td(nowrap="nowrap")
+              span(_type="channel_id") #{record.channel_id}
+            td(nowrap="nowrap")
+              span(_type="connection_id") #{record.connection_id}
+            td(nowrap="nowrap")
+              span(_type="created_at") #{record.created_at}
+  != partial( 'common/_pagenation' )

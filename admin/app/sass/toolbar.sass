@@ -1,0 +1,26 @@
+@import "lib.sass"
+
+#toolbar
+  height: 30px
+  padding: 10px 10px 0
+  
+  li
+    @include float-l
+  
+  a
+    display: block
+    padding: 4px 10px 5px
+    color: #111
+    text-shadow: 0 1px 0 white
+    border-left: 1px solid #ccc
+    border-right: 1px solid #222
+    @include box-shadow( 1px, 1px, 5px, 0, rgba(0,0,0,.6))
+    @include box-gradient( #eee, #888 )
+    &.first
+      border-left: none
+      @include box-round-each( 4px, 0, 0, 4px )
+    &.last  
+      border-right: none
+      @include box-round-each( 0, 4px, 4px, 0 )
+    &.md
+      @include box-sink( 0, 0, 10px, 3px, #444 )

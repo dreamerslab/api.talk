@@ -1,0 +1,65 @@
+@import "lib.sass"
+
+#content
+  position: absolute
+  overflow: hidden
+  top: 30px
+  left: 161px
+  right: 0
+  bottom: 24px
+  @include box-sink( 0, 0, 5px, 1px, #222 )
+  
+#records
+  position: absolute
+  top: 40px
+  left: 0
+  right: 0
+  bottom: 0
+  padding: 0 0 30px 
+  overflow: auto
+  
+  table
+    th, td
+      text-align: center
+    
+    th
+      font-weight: bolder
+      text-shadow: 1px 1px 1px black
+      padding: 10px
+      
+      a
+        color: #eee
+    
+    td
+      color: #ddd
+      text-shadow: 0 -1px 0 #111
+      padding: 5px 10px
+      @include select
+      
+      img
+        width: 50px
+        height: 50px
+    
+    tr
+      border-bottom: 1px solid #383838
+      &.selected
+        // background: #2d2d2d
+        color: white
+        background: url( '/img/bg/row-selected.gif' ) repeat
+        border-bottom: 1px solid #333
+
+#pagenation
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  padding: 8px 0
+  text-align: center
+  
+  a 
+    padding: 5px
+    font-weight: bolder
+    color: #eee
+    text-shadow: 1px 1px 1px black
+    &.selected
+      text-decoration: underline

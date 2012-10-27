@@ -1,0 +1,35 @@
+@import "lib.sass"
+
+header
+  height: 30px
+  background: url( '/img/bg/header.gif' ) repeat
+  position: relative
+  text-align: center
+
+#header-l
+  position: absolute
+  padding: 7px 0 0 0
+  top: 0
+  bottom: 0
+  left: 0
+  width: 160px
+  border-right: 1px solid black
+  
+#logo
+
+#title
+  position: absolute
+  padding: 7px 0 0 0
+  top: 0
+  bottom: 1px
+  left: 161px
+  right: 100px
+  border-left: 1px solid #5E5E5E
+  
+#header-r
+  padding: 7px 10px 0 0
+  @include float-r
+  
+  li
+    @include float-l
+    padding: 0 3px
