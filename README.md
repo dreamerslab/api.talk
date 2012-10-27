@@ -1,5 +1,9 @@
 # talkpl.us api server
 
+A 2 day project from 2011 Startup Weekend Taipei Talkpl.us team. Talkpl.us is an embeddable chat service across websites and mobile phones with topics that you are interested in.
+
+
+
 ## Requires
 
   - node 0.8.x
